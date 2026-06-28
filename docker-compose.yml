@@ -30,7 +30,7 @@ services:
     container_name: vpx-mtg
     restart: always
     ports:
-      - "216.57.111.92:1443:1443"
+      - "1443:1443"
     entrypoint: ["/mtg"]
     command: ["simple-run", "0.0.0.0:1443", "${MTG_SECRET}", "--concurrency=512", "--antireplay-cache-size=8MB", "--timeout=30s"]
     # Секрет задаётся в .env
