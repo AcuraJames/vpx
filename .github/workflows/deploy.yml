@@ -17,8 +17,8 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-              cd /opt/vpx/vpx
-              git pull origin master
+            cd /opt/vpx/vpx
+            git pull origin master
             export XRAY_UUID="${{ secrets.XRAY_UUID }}"
             export XRAY_PRIVATE_KEY="${{ secrets.XRAY_PRIVATE_KEY }}"
             export SS_PASSWORD="${{ secrets.SS_PASSWORD }}"
