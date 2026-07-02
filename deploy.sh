@@ -22,14 +22,14 @@ MTG_SECRET=${MTG_SECRET}
 ENV
 
 echo "[3/4] Pulling images..."
-docker compose pull
+docker-compose pull
 
 echo "[4/4] Starting services..."
-docker compose up -d
+docker-compose up -d
 
 echo "Health check..."
 sleep 3
-docker compose ps
-docker compose logs --tail=10 xray mtproto-proxy
+docker-compose ps
+docker-compose logs --tail=10 xray mtproto-proxy
 
 echo "Done."
